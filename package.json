@@ -1,0 +1,41 @@
+{
+  "name": "node-mercadobitcoin",
+  "version": "0.0.1",
+  "description": "Client for Mercado Bitcoin Api and Trade Api.",
+  "main": "dist/index.js",
+  "files": ["lib/**/* "],
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaellaurindo/node-mercadobitcoin.git"
+  },
+  "keywords": [
+    "api",
+    "bitcoin",
+    "criptocurrency",
+    "mercado bitcoin",
+    "node",
+    "trading"
+  ],
+  "author": "Rafael Laurindo <https://rafaellaurindo.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafaellaurindo/node-mercadobitcoin/issues"
+  },
+  "homepage": "https://github.com/rafaellaurindo/node-mercadobitcoin#readme",
+  "devDependencies": {
+    "@types/node": "^11.9.4",
+    "@types/request": "^2.48.1",
+    "prettier": "^1.16.4",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
