@@ -1,10 +1,12 @@
 {
   "name": "node-mercadobitcoin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Client for Mercado Bitcoin Api and Trade Api.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": ["lib/**/* "],
+  "files": [
+    "lib/**/* "
+  ],
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
