@@ -62,7 +62,7 @@ export default class Api {
     method: string,
     currency: string,
     callback: (...args: any[]) => void,
-    optionals?: string,
+    optionals: string = '',
   ): void {
     const options = {
       headers: { Accept: 'application/json' },
