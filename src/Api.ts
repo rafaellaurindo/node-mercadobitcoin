@@ -7,10 +7,10 @@ const ENDPOINT_API = 'https://www.mercadobitcoin.com.br/api';
 
 export default class Api {
   /**
-   * Get information with the last 24 hours of trading in Mercado Bitcoin.
+   * Get information with the last 24 hours of trading of a cryptocurrency in Mercado Bitcoin.
    *
    * @param {string} currency Acronym for the digital currency: BCH, BTC, ETH, LTC, XRP.
-   * @param {Function} callback  Callback function.
+   * @param {Function} callback Callback function.
    */
   public getTicker(currency: string, callback: () => void): void {
     Utils.throwErrorIfIsNotAValidCurrency(currency);
@@ -21,7 +21,7 @@ export default class Api {
    * Get order book of a cryptocurrency in Mercado Bitcoin.
    *
    * @param {string} currency Acronym for the digital currency: BCH, BTC, ETH, LTC, XRP.
-   * @param {Function} callback  Callback function.
+   * @param {Function} callback Callback function.
    */
   public getOrderBook(currency: string, callback: () => void): void {
     Utils.throwErrorIfIsNotAValidCurrency(currency);
@@ -32,7 +32,7 @@ export default class Api {
    * Get History of negotiations of a cryptocurrency in Mercado Bitcoin.
    *
    * @param {string} currency Acronym for the digital currency: BCH, BTC, ETH, LTC, XRP.
-   * @param {Function} callback  Callback function.
+   * @param {Function} callback Callback function.
    */
   public getTrades(currency: string, callback: () => void): void {
     Utils.throwErrorIfIsNotAValidCurrency(currency);
@@ -40,7 +40,7 @@ export default class Api {
   }
 
   /**
-   * Get get the daily summary of trades made in Mercado Bitcoin.
+   * Get the daily summary of trades made in Mercado Bitcoin.
    *
    * @param {string} currency Acronym for the digital currency: BCH, BTC, ETH, LTC, XRP.
    * @param {string} date Date in format: AAAA/MM/DD. Eg.: 2018/02/21.
@@ -55,7 +55,7 @@ export default class Api {
    * Method where the call is made to the API of Mercado Bitcoin.
    *
    * @param {string} method Method of API
-   * @param {string} currency Acronym for the digital currency
+   * @param {string} currency Acronym for the digital currency: BCH, BTC, ETH, LTC, XRP.
    * @param {Function} callback Callback function.
    */
   private _callMercadoBitcoinApi(
