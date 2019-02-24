@@ -43,11 +43,12 @@ export default class Api {
    * Get the daily summary of trades made in Mercado Bitcoin.
    *
    * @param {string} currency Acronym for the digital currency: BCH, BTC, ETH, LTC, XRP.
-   * @param {string} date Date in format: AAAA/MM/DD. Eg.: 2018/02/21.
+   * @param {string} date Date in format: YYYY-MM-DD. Eg.: 2019-02-23.
    * @param {Function} callback Callback function.
    */
   public getDaySummary(currency: string, date: string, callback: () => void): void {
     Utils.throwErrorIfIsNotAValidCurrency(currency);
+    date = date.replace(/-/g,'/');
     this._callMercadoBitcoinApi('day-summary', currency, callback, date);
   }
 

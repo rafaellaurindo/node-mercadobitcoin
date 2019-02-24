@@ -15,17 +15,17 @@ npm install -S node-mercadobitcoin
 const MercadoBitcoin = require('node-mercadobitcoin').default;
 const mbtcApi = new MercadoBitcoin.Api();
 
-// Get information with the last 24 hours of Bitcoin trading in Mercado Bitcoin.
+// // Get information with the last 24 hours of Bitcoin trading in Mercado Bitcoin.
 mbtcApi.getTicker('btc', ticker => console.log(ticker.ticker));
 
-// Get order book of Litecoin in Mercado Bitcoin.
-mbtcApi.getOrderBook('ltc', ticker => console.log(ticker.ticker));
+// // Get order book of Litecoin in Mercado Bitcoin.
+mbtcApi.getOrderBook('ltc', orderBook => console.log(orderBook));
 
-// Get history of Ripple negotiations in Mercado Bitcoin.
+// // Get history of Ripple negotiations in Mercado Bitcoin.
 mbtcApi.getTrades('xrp', trades => console.log(trades));
 
 // Get the daily summary of Ethereum trades made in Mercado Bitcoin.
-mbtcApi.getDaySummary('eth', trades => console.log(trades));
+mbtcApi.getDaySummary('eth', '2019-02-21', daySummary => console.log(daySummary));
 ```
 ## Contributing
 
