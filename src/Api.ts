@@ -48,7 +48,7 @@ export default class Api {
    */
   public getDaySummary(currency: string, date: string, callback: () => void): void {
     Utils.throwErrorIfIsNotAValidCurrency(currency);
-    date = date.replace(/-/g,'/');
+    date = date.replace(/-/g, '/');
     this._callMercadoBitcoinApi('day-summary', currency, callback, date);
   }
 
