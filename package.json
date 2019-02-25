@@ -1,6 +1,6 @@
 {
   "name": "node-mercadobitcoin",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Client for Mercado Bitcoin Api and Trade Api.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
