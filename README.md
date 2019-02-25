@@ -1,4 +1,8 @@
-# Node Mercado Bitcoin
+[![npm](https://img.shields.io/npm/v/node-mercadobitcoin.svg)](https://www.npmjs.com/package/node-mercadobitcoin)
+[![GitHub issues](https://img.shields.io/github/issues/rafaellaurindo/node-mercadobitcoin.svg)](https://github.com/rafaellaurindo/node-mercadobitcoin/issues)
+[![license](https://img.shields.io/github/license/rafaellaurindo/node-mercadobitcoin.svg)](http://spdx.org/licenses/MIT)
+
+# Node Mercado Bitcoin :currency_exchange:
 
 Client to easily use [Mercado Bitcoin](https://www.mercadobitcoin.com.br/) APIs.
 
@@ -32,6 +36,9 @@ mbtcApi.getDaySummary('eth', '2019-02-21', daySummary => console.log(daySummary)
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+### Pay me a pizza :pizza:
+1McMwihX3D2gwQqo3F9ez9namd2AB7U53B
 
 ## License
 
