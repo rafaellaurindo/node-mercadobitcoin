@@ -1,5 +1,7 @@
 import * as request from 'request';
 
+import ICallback from './Interfaces/ICallback';
+
 import MercadoBitcoinError from './Errors/MercadoBitcoinError';
 import Utils from './Utils';
 
@@ -10,9 +12,9 @@ export default class Api {
    * Get information with the last 24 hours of trading of a cryptocurrency in Mercado Bitcoin.
    *
    * @param {string} currency Acronym for the digital currency: BCH, BTC, ETH, LTC, XRP.
-   * @param {Function} callback Callback function.
+   * @param {ICallback} callback Callback function.
    */
-  public getTicker(currency: string, callback: () => void): void {
+  public getTicker(currency: string, callback: ICallback): void {
     Utils.throwErrorIfIsNotAValidCurrency(currency);
     this._callMercadoBitcoinApi('ticker', currency, callback);
   }
@@ -21,9 +23,9 @@ export default class Api {
    * Get order book of a cryptocurrency in Mercado Bitcoin.
    *
    * @param {string} currency Acronym for the digital currency: BCH, BTC, ETH, LTC, XRP.
-   * @param {Function} callback Callback function.
+   * @param {ICallback} callback Callback function.
    */
-  public getOrderBook(currency: string, callback: () => void): void {
+  public getOrderBook(currency: string, callback: ICallback): void {
     Utils.throwErrorIfIsNotAValidCurrency(currency);
     this._callMercadoBitcoinApi('orderbook', currency, callback);
   }
@@ -32,9 +34,9 @@ export default class Api {
    * Get History of negotiations of a cryptocurrency in Mercado Bitcoin.
    *
    * @param {string} currency Acronym for the digital currency: BCH, BTC, ETH, LTC, XRP.
-   * @param {Function} callback Callback function.
+   * @param {ICallback} callback Callback function.
    */
-  public getTrades(currency: string, callback: () => void): void {
+  public getTrades(currency: string, callback: ICallback): void {
     Utils.throwErrorIfIsNotAValidCurrency(currency);
     this._callMercadoBitcoinApi('trades', currency, callback);
   }
@@ -44,9 +46,9 @@ export default class Api {
    *
    * @param {string} currency Acronym for the digital currency: BCH, BTC, ETH, LTC, XRP.
    * @param {string} date Date in format: YYYY-MM-DD. Eg.: 2019-02-23.
-   * @param {Function} callback Callback function.
+   * @param {ICallback} callback Callback function.
    */
-  public getDaySummary(currency: string, date: string, callback: () => void): void {
+  public getDaySummary(currency: string, date: string, callback: ICallback): void {
     Utils.throwErrorIfIsNotAValidCurrency(currency);
     date = date.replace(/-/g, '/');
     this._callMercadoBitcoinApi('day-summary', currency, callback, date);
@@ -57,12 +59,12 @@ export default class Api {
    *
    * @param {string} method Method of API
    * @param {string} currency Acronym for the digital currency: BCH, BTC, ETH, LTC, XRP.
-   * @param {Function} callback Callback function.
+   * @param {ICallback} callback Callback function.
    */
   private _callMercadoBitcoinApi(
     method: string,
     currency: string,
-    callback: (...args: any[]) => void,
+    callback: ICallback,
     optionals: string = '',
   ): void {
     const options = {
