@@ -16,8 +16,8 @@ npm install -S node-mercadobitcoin
 
 ## Usage
 ```javascript
-const MercadoBitcoin = require('node-mercadobitcoin').default;
-const mbtcApi = new MercadoBitcoin.Api();
+const { Api } = require('node-mercadobitcoin');
+const mbtcApi = new Api();
 
 // // Get information with the last 24 hours of Bitcoin trading in Mercado Bitcoin.
 mbtcApi.getTicker('btc', ticker => console.log(ticker.ticker));
