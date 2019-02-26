@@ -61,12 +61,7 @@ export default class Api {
    * @param {string} currency Acronym for the digital currency: BCH, BTC, ETH, LTC, XRP.
    * @param {ICallback} callback Callback function.
    */
-  private _callMercadoBitcoinApi(
-    method: string,
-    currency: string,
-    callback: ICallback,
-    optionals: string = '',
-  ): void {
+  private _callMercadoBitcoinApi(method: string, currency: string, callback: ICallback, optionals: string = ''): void {
     const options = {
       headers: { Accept: 'application/json' },
       url: `${ENDPOINT_API}/${currency}/${method}/${optionals}`,
