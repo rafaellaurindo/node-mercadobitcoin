@@ -13,8 +13,9 @@
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
     "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "test": "mocha -r ts-node/register tests/**/*.spec.ts",
+    "version": "npm run format && git add -A src"
   },
   "repository": {
     "type": "git",
@@ -40,9 +41,14 @@
   },
   "homepage": "https://github.com/rafaellaurindo/node-mercadobitcoin#readme",
   "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
     "@types/node": "^11.9.4",
     "@types/request": "^2.48.1",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2",
     "prettier": "^1.16.4",
+    "ts-node": "^8.0.2",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.3.3"
